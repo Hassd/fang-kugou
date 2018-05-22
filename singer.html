@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/mian.css">
+    <style>
+        body{user-select:none;}
+        .mian{margin-top: 20px;}
+        .mian-left{width: 219px;border-right: 1px solid #ccc;}
+        .mian-left ul{width: 210px;margin-bottom: 42px;}
+        .mian-left li{width: 210px;height: 30px;}
+        .mian-left a{width: 210px;display: block;height: 30px;text-align: center;line-height: 30px;font-size: 12px;color: #555;}
+        .mian-left a:hover{background: #85d2f2;color: #fff;}
+        .mian-zhong{background: #85d2f2 !important;color: #fff !important;}
+
+
+        .mian-right{width: 770px;}
+        .mian-title{width: 100%;padding-bottom: 10px;height: 24px;border-bottom: 1px solid #ccc;margin-bottom: 10px;}
+        .mian-title a{font-size: 14px;padding:0 8px;height: 24px;text-align: center;line-height: 24px;color: #333;display: block;float: left;margin-right: 1px;}
+        .mian-title a:hover{background: #85d2f2 !important;color: #fff !important;}
+        .mian-rong{width: 100%;}
+        .mian-rong-1{width: 70px;height: 100px;display: block;margin:0px 15px 20px 0;;position: relative;float: left;}
+        .mian-rong-1:hover img{border: 2px solid #1e84e4; padding: 0;}
+        .mian-rong-1 img{width: 68px;height: 68px;padding: 1px;border: 1px solid #ccc;opacity: 1;}
+        .mian-rong-1 samp{width: 70px;height: 15px;margin-top: 10px;display: block;color: #000;font-size: 12px;}
+        .mian-rong-1 em{width: 66px;position: absolute;height: 20px;font-size: 20px;text-indent: 10px; line-height: 20px;color: #fff; top: 50px;left: 2px; background: linear-gradient(to right, #333 1%,transparent 99%);display: block;}
+
+        .mian-rong-1:before,.mian-rong-1:after {content: "";position: absolute;transform: rotate(-10deg);bottom: 40px;box-shadow: 0 15px 5px rgba(0, 0, 0, 0.3);height: 20px;left: 0px; max-width: 70px;width: 50%;}
+        .mian-rong-1:after {transform: rotate(10deg);left: 40px;}
+        .mian-rong-1 .content {position: relative;z-index: 2;font-size: 13px;text-align: center;background: #fff;padding: 10px;}
+
+
+    </style>
+</head>
+<body>
+    <div id="head">                                     <!--头部-->
+        <div class="he-title">
+            <div class="logo left">                     <!--logo、搜索、登录、注册-->
+                <img src="img/logo.png" alt="logo">     <!--logo-->
+            </div>  
+            <div class="search left">                   <!--搜索-->
+                <div class="search-1">                  <!--搜索框-->
+                    <input class="left" type="text" placeholder="啦啦啦">
+                    <a class="left" href="#"></a>
+                </div>
+            </div>
+            <div class="he-ti-ke left">                      <!--客服中心、招贤纳士、会员中心-->
+                <a href="#">客服中心</a>
+                <a href="#">招贤纳士</a>
+                <a href="#">会员中心</a>
+            </div>
+            <div class="he-ti-de right">                      <!--登录、注册-->
+                <a class="left" href="#">登录</a>
+                <a class="left" href="registered.html">注册</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="navr">                                     <!--导航栏-->
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="list.html">榜单</a></li>
+                <li><a href="download.html">下载客户端</a></li>
+                <li class="nav-2">          <!--二级菜单-->
+                    <a>更多<samp></samp></a>
+                    <ul>
+                        <il><a href="radio.html">电台</a></il>
+                        <il><a href="MV.html">MV</a></il>
+                        <il><a href="playlist.html">歌单</a></il>
+                        <il><a href="singer.html">歌手</a></il>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-3 right">
+                <ul>
+                    <li><a class="nav-3-a1" href="#">音乐直播</a></li>
+                    <li><a class="nav-3-a2" href="#">酷狗LIVE</a></li>
+                    <li><a class="nav-3-a3" href="#">音乐人</a></li>
+                    <li><a class="nav-3-a4" href="#">游戏</a></li>
+                    <li><a class="nav-3-a5" href="#">商城</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="mian"><!--主要内容-->
+        <div class="mian-left left">
+            <ul>
+                <li><a class="mian-zhong" href="#">全部歌手</a></li>
+                <li><a href="#">华语男歌手</a></li>
+                <li><a href="#">华语女歌手</a></li>
+                <li><a href="#">华语组合</a></li>
+                <div style="clear: both;"></div>
+            </ul>
+            <ul>
+                <li><a href="#">日韩男歌手</a></li>
+                <li><a href="#">日韩女歌手</a></li>
+                <li><a href="#">日韩组合</a></li>
+                <div style="clear: both;"></div>
+            </ul>
+            <ul>
+                <li><a href="#">欧美男歌手</a></li>
+                <li><a href="#">欧美女歌手</a></li>
+                <li><a href="#">欧美组合</a></li>
+                <div style="clear: both;"></div>
+            </ul>
+            <ul>
+                <li><a href="#">其他</a></li>
+            </ul>
+        </div>
+        <div class="mian-right right">
+            <div class="mian-title">
+                <a class="mian-zhong" href="#">热门</a>
+                <a href="#">A</a>
+                <a href="#">B</a>
+                <a href="#">C</a>
+                <a href="#">D</a>
+                <a href="#">E</a>
+                <a href="#">F</a>
+                <a href="#">G</a>
+                <a href="#">H</a>
+                <a href="#">I</a>
+                <a href="#">J</a>
+                <a href="#">K</a>
+                <a href="#">L</a>
+                <a href="#">M</a>
+                <a href="#">N</a>
+                <a href="#">O</a>
+                <a href="#">P</a>
+                <a href="#">Q</a>
+                <a href="#">R</a>
+                <a href="#">S</a>
+                <a href="#">T</a>
+                <a href="#">U</a>
+                <a href="#">V</a>
+                <a href="#">W</a>
+                <a href="#">X</a>
+                <a href="#">Y</a>
+                <a href="#">Z</a>
+                <a href="#">其他</a>
+            </div>
+            <div class="mian-rong">
+
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1th</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>2th</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>3th</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <a href="#" class="mian-rong-1">
+                    <img src="img/q9.jpg" alt="q9">
+                    <em>1</em>
+                    <samp>周杰伦</samp>
+                </a>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer"><!--尾部-->
+        <div class="foo">
+            <div class="foo-1">
+                <a href="#">关于酷狗</a>
+                <samp>|</samp>
+                <a href="#">监督举报</a>
+                <samp>|</samp>
+                <a href="#">广告服务</a>
+                <samp>|</samp>
+                <a href="#">版权指引</a>
+                <samp>|</samp>
+                <a href="#">隐私政策</a>
+                <samp>|</samp>
+                <a href="#">用户服务协议</a>
+                <samp>|</samp>
+                <a href="#">推广合作</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐人</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐推</a>
+                <samp>|</samp>
+                <a href="#">招聘信息</a>
+                <samp>|</samp>
+                <a href="#">客服中心</a>
+                <samp>|</samp>
+                <a href="#">用户体验提升计划</a>
+            </div>
+        </div>
+        
+        <div class="foo-2">
+			<div class="foo-text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</div>
+            <div class="foo-text">信息网络传播视听节目许可证1910564增值电信业务经营许可证粤B-2-20060339ICP &nbsp&nbsp&nbsp备09017694号-2</div>
+            <div class="foo-text">广播电视节目制作经营许可证（粤）字第01270号&nbsp&nbsp &nbsp 营业性演出许可证穗天演440106026</div>
+            <div class="foo-text">穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018&nbsp;&nbsp;&nbsp;粤公网安备 44010602000141号</div>
+            <div class="foo-text">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2018 KuGou-Inc.All Rights Reserved</div>
+        </div>
+    </div>
+</body>
+</html>

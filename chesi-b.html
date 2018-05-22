@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function urlvalue(){
+            let c=window.location.search.substr(1).split('&');
+            let e=Array();
+            for(let d=0;d<c.length;d++){
+
+                e.push(c[d].split('=')[1]);
+            }
+            return e;
+        }
+        
+       console.log(urlvalue());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

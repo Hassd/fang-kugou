@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/mian.css">
+    <style>
+        body{user-select:none;}
+        .mian-ge-di samp,.mian-bang-2 samp,.mian-shou-text samp,.mian-mv-2 samp,.mian-re-1 samp,.mian-re-2 samp{overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+        #shuffling{width: 100%;overflow: hidden;height: 445px;position: relative}
+        .shu-2{width: 100%;position: absolute;bottom: 0px;height: 60px;background: #999;opacity: 0.9;}
+        .shu-2 div{width: 1000px;height: 60px;margin: 0 auto;}
+        .shu-2 div a,.shu-2 div samp{line-height: 26px;float: left;display: block;color: #fff;height: 26px;margin-top: 20px;}
+        .shu-2 div a{text-indent: 40px;font-size: 14px;text-align: right;}
+        .shu-2 div a:hover{color: #666;}
+        .shu-2 div a:nth-child(1){background: url(img/客户端下载图标1.png) no-repeat 0px 0px;margin-left: 200px;}
+        .shu-2 div a:nth-child(3){background: url(img/客户端下载图标1.png) no-repeat 0px -35px;}
+        .shu-2 div a:nth-child(5){background: url(img/客户端下载图标1.png) no-repeat 0px -72px;}
+        .shu-2 div samp{font-size: 18px;margin: 20px 60px;}
+
+
+        #shuffling img{width: 1920px;height: 445px;}
+        .shu-1{width: 1000px;margin: 0 auto;position: relative;height: 445px;}
+
+        .shu-ul-1{position: absolute;top: 0;left: -460px;}
+        .shu-ul-1 li{display: none;}
+        #shuffling:hover span{display: block;}
+        #shuffling span{width:80px ;height:150px ;position:absolute;top: 110px;background: #777;color: #fff;font-size: 120px;font-weight: 400;line-height: 150px;cursor: pointer;opacity: 0.5;display: none;}
+        #shuffling span:hover{opacity: 0.8;}
+        .shu-span-1{left: 0;text-align: left;}
+        .shu-span-2{right: 0;text-align: right;}
+        .shu-ul-2{width: 500px;position: absolute;bottom: 70px;height: 30px;left: 250px;}
+        .shu-ul-2 li{width: 10px;height: 10px;border-radius: 50%;background: #999;margin-left: 40px;margin-top: 7px;cursor: pointer;}
+        .shu-ul-2 li:hover{transform:scale(2);background: #fff;}
+
+
+
+        
+        .mian-left{width: 650px;}
+        .mian-right{width: 320px;}
+        .mian-title{width: 100%;height: 100px;}
+        .mian-title-h2{color: #555;font-size: 28px;width: 160px;height: 40px;margin-top: 35px;}
+        .mian-title-h2 samp{color:#0099f3;}
+        .mian-title-h4{height: 25px;margin-top: 45px;}
+        .mian-title-h4 a{font-size: 12px;color: #000;margin-right: 15px;}
+        .mian-title-h4 a:hover{color: #0099f3;}
+        .mian-title-btn{display: block; font-size: 12px;width: 88px;height: 28px;border: 1px solid #dbdbdb;line-height: 28px;color: #555;text-indent: 28px;border-radius:2px;background: url(img/图标2.png) no-repeat 0px 6px ;margin-top: 38px;}
+        .mian-title-btn:hover{color:#0099f3;background: url(img/图标2.png) no-repeat -1px -46px ;border: 1px solid #169af3;}
+        .mian-title-a{font-size: 12px;color: #999;display: block;margin-top: 48px;}
+        .mian-title-a:hover{color: #0099f3;}
+
+        .mian-ge{width: 100%; height: 325px;}
+        .mian-ge-1{width:325px ; height: 325px;position: relative;display: block;}
+        .mian-ge-1 img{width:325px ; height: 325px;}
+        .mian-ge-bei{width: 100%;height: 30px;color:#fff;background: linear-gradient(to right,transparent, #000);opacity: 0.5;position: absolute;top: 0;left: 0;}
+        .mian-ge-bei div{margin-right: 8px;text-align: right;line-height: 30px;height: 30px;background: url(img/图标2.png) no-repeat 0px -97px;text-indent: 30px}
+        .mian-ge-di{width: 100%;height: 50px;position: absolute;bottom: 0;left: 0;background: #000;opacity: 0.5;}
+        .mian-ge-di samp{display: block;height: 20px;width: 100%;margin-top: 5px;text-indent: 20px;line-height: 20px;font-size: 12px;}
+        .mian-ge-samp-1{color: #fff;}
+        .mian-ge-samp-2{color: #999;}
+        .mian-ge-zhe-1{display:none; width:325px ; height: 325px;background: #000;opacity: 0.5;position: absolute;top: 0;left: 0;}
+        
+        .mian-ge-1:hover .mian-ge-zhe-1{display: block;}
+        .mian-ge-1:hover .mian-ge-bo{display: block;}
+        .mian-ge-bo{ width: 38px;height: 38px;border-radius:50%;border: 2px solid #666;background: url(img/播放1.png) no-repeat 8px 8px;position: absolute;right: 5px;bottom: 5px;display: none;}
+        .mian-ge-bo:hover{border: 2px solid #fff;}
+        .mian-ge-2{width: 325px;height: 325px;}
+        .mian-ge-2-1{width: 160px;height: 160px;position: relative;margin-left: 5px;margin-bottom: 5px;display: block;}
+        .mian-ge-2-1 img{width: 100%;height: 160px;}
+        .mian-ge-zhe-2{display: none; width: 100%;height:160px;background: #000;opacity: 0.5;position: absolute;top: 0;left: 0;}
+        .mian-ge-t1{width: 155px;}
+        .mian-ge-2-1:hover .mian-ge-zhe-2{display: block;}
+        .mian-ge-2-1:hover .mian-ge-bo{display: block;}
+
+
+        .mian-bang{width: 320px;height: 98px;margin-bottom: 15px;background: #f6f6f6;display: block;}
+        .mian-bang-zhe,.mian-bang-1,.mian-bang-1 img{width: 98px;height: 98px;}
+        .mian-bang-1{position: relative;background: #999;}
+        .mian-bang-zhe{background: #000;opacity: 0.5; position: absolute;top: 0;left: 0;display:none;}
+        .mian-bang-1:hover .mian-bang-zhe{display: block;}
+        .mian-bang-1:hover .mian-bang-bo{display: block;}
+        .mian-bang-bo{width: 36px;height: 36px;border: 2px solid #777;position: absolute;border-radius: 50%;top: 29px;left: 29px;background:url(img/播放1.png) no-repeat 7px 7px ;display: none;}
+        .mian-bang-bo:hover{border: 2px solid #fff;}
+        .mian-bang-2{height: 78px;width: 175px;padding: 10px;}
+        .mian-bang-2 h3{color:#333;font-size: 14px;}
+        .mian-bang-2 samp{color: #555;display: block;margin-top: 12px;font-size: 12px;}
+        .mian-bang-3{height: 98px;width: 27px;text-align: center;line-height: 98px;}
+
+        .mian-shou{width: 100%;height: 320px;}
+        .mian-shou-zhong{width: 100%;height: 284px;border-top: 1px solid #f0f0f0;padding:10px 0;}
+        
+        .mian-shou-ge{width: 630px;display: block;padding: 10px;color: #333;height: 15px;}
+        .mian-shou-text{font-size: 12px;width: 545px;}
+        .mian-shou-text samp{display: block;}
+        .mian-shou-ge em{display: block;font-size: 8px;border: 1px solid #ff7f0d;border-radius: 2px;width: 24px;height: 10px;font-style:inherit;color: #ff7f0d;line-height: 10px;margin:-4px 0 0 4px;}
+        .mian-shou-bo,.mian-shou-zai{height: 15px;background: #333;width: 15px;margin: 0 5px;}
+        .mian-shou-bo{background: url(img/图标2.png) no-repeat -8px 0px;display: none;}
+        .mian-shou-bo:hover{background: url(img/图标2.png) no-repeat -9px -52px;}
+        .mian-shou-zai{background: url(img/图标2.png) no-repeat -8px -26px;display: none;}
+        .mian-shou-zai:hover{background: url(img/图标2.png) no-repeat -8px -78px;}
+        .mian-shou-ge:hover{background: #eee;color:#0099f3;}
+        .mian-shou-ge:hover em{display: none;}
+        .mian-shou-ge:hover .mian-shou-bo{display: block;}
+        .mian-shou-ge:hover .mian-shou-zai{display: block;}
+        .mian-shou-time{display: block;width: 35px;height: 15px;font-size: 12px;text-align: right;}
+
+        .mian-shou-di{width: 100%;height: 15px;line-height: 15px;}
+        .mian-shou-fen{width: 100px;margin: 0 auto; }
+        .mian-shou-fen a{color: #777777;}
+        .mian-shou-fen samp{color:#bb9b8d;}
+
+        .mian-mv{width: 320px;height: 320px;}
+        .mian-mv-1{width: 100%; height: 175px;position: relative;display: block;margin-bottom: 12px;}
+        .mian-mv-1 img{width: 100%;height: 175px;}
+
+        .mian-mv-zhe-1{position: absolute;top: 0;left: 0;width: 100%;height: 175px;background: #000;opacity: 0.5;display: none;}
+        .mian-mv-bo{width: 46px;height: 46px;border: 2px solid #999;border-radius: 50%;position: absolute;top: 0;left: 0;background: url(img/播放1.png) no-repeat 12px 12px;left: 50%;top: 50%;margin-left: -25px;margin-top: -25px;display:none;}
+        .mian-mv-bo:hover{border: 2px solid #fff;}
+        .mian-mv-1:hover .mian-mv-bo{display: block;}
+        .mian-mv-1:hover .mian-mv-zhe-1{display: block;}
+
+
+        .mian-mv-2{width: 154px;display: block;}
+        .mian-mv-2 img{width: 100%;height: 84px;}
+        .mian-mv-sa{width: 100%;height: 84px;position: relative;}
+        .mian-mv-zhe-2{width: 100%;height: 84px;position: absolute;background: #000;opacity: 0.5;top: 0;left: 0;display: none;}
+        .mian-mv-2 samp{width: 100%;display: block;font-size: 12px;margin-top: 6px;}
+        .mian-mv-2:hover .mian-mv-bo{display: block;}
+        .mian-mv-2:hover .mian-mv-zhe-2{display: block;}
+        .mian-mv-samp-1{color: #444;}
+        .mian-mv-2:hover .mian-mv-samp-1{color: #0099f3;}
+        .mian-mv-samp-2{color:#888;}
+
+
+
+        .mian-dian{width: 650px;height: 128px;display: flex;justify-content:space-around;}
+        .mian-dian-rong{width:100px;height: 128px;display: block;}
+        .mian-dian-1{width: 100px;height: 100px;position: relative;}
+        .mian-dian-1 img{width: 100px;height: 100px;border-radius: 50%;}
+        .mian-dian-zhe-1{border: 10px solid #000;border-radius: 50%;width: 80px;height: 80px;position: absolute;top: 0;left: 0;opacity: 0.6;}
+        .mian-dian-zhe-2{width: 80px;height: 80px;position: absolute;top: 10px;left: 10px;opacity: 0.1;border-radius: 50%;background: #000;display: none;}
+        .mian-dian-bo{background: url(img/播放1.png) no-repeat 9px -23px;}
+        .mian-dian-bo,.mian-dian-zhe-3{width: 40px;height: 40px;position: absolute;top:30px;left: 30px;display: none;}
+        .mian-dian-zhe-3{border-radius: 50%;background: #000;opacity: 0.5;}
+        .mian-dian-rong:hover .mian-dian-zhe-1{opacity: 0.8;}
+        .mian-dian-rong:hover .mian-dian-zhe-2{display: block;}
+        .mian-dian-rong:hover .mian-dian-zhe-3{display: block;}
+        .mian-dian-rong:hover .mian-dian-bo{display: block;}
+        .mian-dian-rong samp{display: block; text-align:center;width: 100%;font-size: 12px;color: #333;height: 12px;margin-top: 15px;}
+        .mian-dian-rong:hover samp{color: #0099f3;}
+
+
+        .mian-re{width: 320px;height: 270px;position: relative;overflow: hidden;}
+        .mian-re ul{position: absolute;top: 0;left: 0;width: 960px;height: 270px;}
+        .mian-re li{float: left;}
+
+
+        .mian-re-1{width: 320px;height: 160px;margin-bottom: 5px;}
+        .mian-re-1 a{width: 155px;height: 160px;}
+        .mian-re-1 img{width: 155px;height: 160px;}
+        .mian-re-1 div{width: 155px;height: 160px;}
+        .mian-re-1 samp{width: 155px;}
+        .mian-re-1 a:hover  div{display: block;}
+
+
+        .mian-guang,.mian-re-di ul,.mian-re-1,.mian-re-2{display: flex;justify-content: space-around;}
+        .mian-re-1 a,.mian-re-2 a{position: relative;display: block;}
+        .mian-re-1 div,.mian-re-2 div{position: absolute;top: 0;left: 0;background: #000;opacity: 0.5;display: none;}
+        .mian-re-1 samp,.mian-re-2 samp{height: 12px;bottom: 12px;text-indent: 10px;color: #fff;font-size: 12px;position: absolute;}
+
+        .mian-re-2{width: 320px;height: 105px;}
+        .mian-re-2 a{width: 105px;height: 105px;}
+        .mian-re-2 img{width: 105px;height: 105px;}
+        .mian-re-2 div{width: 105px;height: 105px;}
+        .mian-re-2 samp{width: 105px;}
+        .mian-re-2 a:hover  div{display: block;}
+
+        .mian-re-di{width: 320px;height: 6px;margin-top: 19px;}
+        .mian-re-di ul{width: 46px;margin: 0 auto;}
+        .mian-re-di li{width: 6px;height: 6px;background: #ccc;cursor: pointer;border-radius: 50%;}
+
+
+        .mian-guang{width: 1000px; height: 60px;margin-bottom: 12px;}
+        .mian-guang div{width: 130px; height: 58px; border: 1px dashed #ccc;text-align: center;}
+        .mian-guang img{max-height: 58px;max-width:130px;}
+
+        .mian-you{width: 1000px;}
+        .mian-you a{display: block;color:#555;width: 125px;height: 12px;font-size: 12px;float: left;margin-bottom: 32px;}
+        .mian-you a:hover{color: #0099f3;}
+    </style>
+    <script>
+    window.onload=function(){
+        var aul=document.getElementById('shuffling').getElementsByTagName('ul');
+        var ali1=aul[0].getElementsByTagName('li');
+        var ali2=aul[1].getElementsByTagName('li');
+        var i=0;
+
+
+        function qwe(){
+            for(let j=0;j<ali1.length;j++){
+                ali1[j].style.display='none';
+                ali2[j].style.transform='scale(1)';
+                ali2[j].style.background='#999';
+                ali2[j].onmouseover=function(){
+                    clearInterval(stt);
+                    i=j;
+                    qwe();
+                    stt=setInterval(qwe,3000);
+                }
+            }
+            
+        
+            ali1[i].style.display='block';
+            ali2[i].style.transform='scale(2)';
+            ali2[i].style.background='#fff';
+            if(i<ali1.length-1){
+                i++;
+            }else{
+                i=0;
+            }
+        }
+        qwe();
+        var stt=setInterval(qwe,3000);
+
+        var aspan=document.getElementById('shuffling').getElementsByTagName('span');
+        aspan[0].onclick=function(){
+            clearInterval(stt);
+            if(i==0){
+                i=6;
+            }else if(i==1){
+                i=7;
+            }else if(i==2){
+                i=0;
+            }else if(i==3){
+                i=1;
+            }else if(i==4){
+                i=2;
+            }else if(i==5){
+                i=3;
+            }else if(i==6){
+                i=4;
+            }else if(i==7){
+                i=5;
+            }
+            
+            qwe();
+            
+            stt=setInterval(qwe,3000);
+        }
+        aspan[1].onclick=function(){
+            clearInterval(stt);
+            qwe();
+            stt=setInterval(qwe,3000);
+        }
+        var oul1=document.getElementById('oul1');
+        var oul2=document.getElementById('oul2');
+        var dli1=oul1.getElementsByTagName('li');
+        var dli2=oul2.getElementsByTagName('li');
+
+        dli2[0].style.background="#0099f3";
+        for(let o=0;o<dli2.length;o++){
+            
+            dli2[o].onmouseover=function(){
+                for(let u=0;u<dli2.length;u++){
+                    dli2[u].style.background="#ccc";
+                }
+                this.style.background="#0099f3";
+                oul1.style.left=-o*320+'px';
+            }
+        }
+    }
+    
+    
+
+
+    </script>
+</head>
+<body>
+    <div id="head">                                     <!--头部-->
+        <div class="he-title">
+            <div class="logo left">                     <!--logo、搜索、登录、注册-->
+                <img src="img/logo.png" alt="logo">     <!--logo-->
+            </div>  
+            <div class="search left">                   <!--搜索-->
+                <div class="search-1">                  <!--搜索框-->
+                    <input class="left" type="text" placeholder="啦啦啦">
+                    <a class="left" href="#"></a>
+                </div>
+            </div>
+            <div class="he-ti-ke left">                      <!--客服中心、招贤纳士、会员中心-->
+                <a href="#">客服中心</a>
+                <a href="#">招贤纳士</a>
+                <a href="#">会员中心</a>
+            </div>
+            <div class="he-ti-de right">                      <!--登录、注册-->
+                <a class="left" href="#">登录</a>
+                <a class="left" href="registered.html">注册</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="navr">                                     <!--导航栏-->
+        <div id="nav">
+            <ul>
+                <li><a class="nav-xvanzhong" href="index.html">首页</a></li>
+                <li><a href="list.html">榜单</a></li>
+                <li><a href="download.html">下载客户端</a></li>
+                <li class="nav-2">          <!--二级菜单-->
+                    <a>更多<samp></samp></a>
+                    <ul>
+                        <il><a href="radio.html">电台</a></il>
+                        <il><a href="MV.html">MV</a></il>
+                        <il><a href="playlist.html">歌单</a></il>
+                        <il><a href="singer.html">歌手</a></il>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-3 right">
+                <ul>
+                    <li><a class="nav-3-a1" href="#">音乐直播</a></li>
+                    <li><a class="nav-3-a2" href="#">酷狗LIVE</a></li>
+                    <li><a class="nav-3-a3" href="#">音乐人</a></li>
+                    <li><a class="nav-3-a4" href="#">游戏</a></li>
+                    <li><a class="nav-3-a5" href="#">商城</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div id="shuffling"><!--图片轮播-->
+        <div class="shu-1">
+            <ul class="shu-ul-1">
+                <li style="display: block;"><a href="#"><img src="img/q1.jpg" alt="q1"></a></li>
+                <li><a href="#"><img src="img/q2.jpg" alt="q2"></a></li>
+                <li><a href="#"><img src="img/q3.jpg" alt="q3"></a></li>
+                <li><a href="#"><img src="img/q4.jpg" alt="q4"></a></li>
+                <li><a href="#"><img src="img/q5.jpg" alt="q5"></a></li>
+                <li><a href="#"><img src="img/q6.jpg" alt="q6"></a></li>
+                <li><a href="#"><img src="img/q7.jpg" alt="q7"></a></li>
+                <li><a href="#"><img src="img/q8.jpg" alt="q8"></a></li>
+            </ul>
+            <ul class="shu-ul-2">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+        </div>
+        <span class="shu-span-1"><</span>
+        <span class="shu-span-2">></span>
+        <div class="shu-2">
+            <div>
+                <a href="#">下载PC版</a>
+                <samp>|</samp>
+                <a href="#">下载iPhone版</a>
+                <samp>|</samp>
+                <a href="#">下载Android版</a>
+            </div>
+        </div>
+    </div>
+    <div class="mian">                                  <!--精选歌单、热门榜单-->
+        <div class="mian-left left">                    <!--精选歌单-->
+            <div class="mian-title">                    <!--精选歌单的标题-->
+                <div class="mian-title-h2 left">
+                    <samp>精选</samp>歌单
+                </div>
+                <a href="#" class="right mian-title-a">
+                    更多
+                </a>
+            </div>
+            <div class="mian-ge">                       <!--精选歌单的主体-->
+                
+
+                
+                <a href="#" class="mian-ge-1 left">     <!--精选歌单的大歌单-->
+                    <div class="mian-ge-bei">
+                        <div class="right">5万</div>
+                    </div>
+                    <img src="img/q9.jpg" alt="ge1">
+                    <div class="mian-ge-di">
+                        <samp class="mian-ge-samp-1">啊实打实</samp>
+                        <samp class="mian-ge-samp-2">噼噼啪啪</samp>
+                    </div>
+                    <div class="mian-ge-zhe-1"></div>
+                    <div class="mian-ge-bo"></div>
+                </a>
+
+                <div class="mian-ge-2 left">
+
+                    <a href="#" class="mian-ge-2-1 left"><!--精选歌单的小歌单 1-->
+                            <div class="mian-ge-bei">
+                                <div class="right">5万</div>
+                            </div>
+                            <img src="img/q9.jpg" alt="ge1">
+                            <div class="mian-ge-di">
+                                <samp class="mian-ge-samp-1">啊实打实</samp>
+                                <samp class="mian-ge-samp-2">噼噼啪啪</samp>
+                            </div>
+                            <div class="mian-ge-zhe-2"></div>
+                            <div class="mian-ge-bo"></div>
+                    </a>
+
+                    <a href="#" class="mian-ge-2-1 mian-ge-t1 left"><!--精选歌单的小歌单 2-->
+                            <div class="mian-ge-bei">
+                                <div class="right">5万</div>
+                            </div>
+                            <img src="img/q9.jpg" alt="ge1">
+                            <div class="mian-ge-di">
+                                <samp class="mian-ge-samp-1">啊实打实</samp>
+                                <samp class="mian-ge-samp-2">噼噼啪啪</samp>
+                            </div>
+                            <div class="mian-ge-zhe-2"></div>
+                            <div class="mian-ge-bo"></div>
+                    </a>
+
+                    <a href="#" class="mian-ge-2-1 left">           <!--精选歌单的小歌单 3-->
+                        <div class="mian-ge-bei">
+                            <div class="right">5万</div>
+                        </div>
+                        <img src="img/q9.jpg" alt="ge1">
+                        <div class="mian-ge-di">
+                            <samp class="mian-ge-samp-1">啊实打实</samp>
+                            <samp class="mian-ge-samp-2">噼噼啪啪</samp>
+                        </div>
+                        <div class="mian-ge-zhe-2"></div>
+                        <div class="mian-ge-bo"></div>
+                    </a>    
+                
+
+                    <a href="#" class="mian-ge-2-1 mian-ge-t1 left"><!--精选歌单的小歌单 4-->
+                        <div class="mian-ge-bei">
+                            <div class="right">5万</div>
+                        </div>
+                        <img src="img/q9.jpg" alt="ge1">
+                        <div class="mian-ge-di">
+                            <samp class="mian-ge-samp-1">啊实打实</samp>
+                            <samp class="mian-ge-samp-2">噼噼啪啪</samp>
+                        </div>
+                        <div class="mian-ge-zhe-2"></div>
+                        <div class="mian-ge-bo"></div>
+                    </a>                
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="mian-right right">                  <!--热门榜单-->
+            <div class="mian-title">                    <!--热门榜单的标题-->
+                <div class="mian-title-h2 left">
+                    <samp>热门</samp>榜单 
+                </div>
+                <a href="#" class="right mian-title-a">
+                    更多
+                </a>
+            </div>
+
+            <a href="#" class="mian-bang">          <!--热门榜单的主要内容的一个框  1-->
+                <div class="mian-bang-1 left">
+                    <img src="img/q9.jpg" alt="q9">
+                    <div class="mian-bang-zhe"></div>
+                    <div class="mian-bang-bo"></div>
+                </div>
+                <div class="mian-bang-2 left">
+                    <h3>酷狗飙升榜</h3>
+                    <samp>1.按实际-上看看</samp>
+                    <samp>2.浮世绘-打回访客户反馈时间好好</samp>
+                </div>
+                <div class="mian-bang-3 left">></div>
+            </a> 
+            <a href="#" class="mian-bang">          <!--热门榜单的主要内容的一个框   2-->
+                <div class="mian-bang-1 left">
+                    <img src="img/q9.jpg" alt="q9">
+                    <div class="mian-bang-zhe"></div>
+                    <div class="mian-bang-bo"></div>
+                </div>
+                <div class="mian-bang-2 left">
+                    <h3>酷狗飙升榜</h3>
+                    <samp>1.按实际-上看看</samp>
+                    <samp>2.浮世绘-打回访客户反馈时间好好</samp>
+                </div>
+                <div class="mian-bang-3 left">></div>
+            </a>
+            <a href="#" style="margin-bottom: 0px;" class="mian-bang"><!--热门榜单的主要内容的一个框  3-->
+                <div class="mian-bang-1 left">
+                    <img src="img/q9.jpg" alt="q9">
+                    <div class="mian-bang-zhe"></div>
+                    <div class="mian-bang-bo"></div>
+                </div>
+                <div class="mian-bang-2 left">
+                    <h3>酷狗飙升榜</h3>
+                    <samp>1.按实际-上看看</samp>
+                    <samp>2.浮世绘-打回访客户反馈时间好好</samp>
+                </div>
+                <div class="mian-bang-3 left">></div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="mian">                                  <!--新歌首发、推荐MV-->
+        <div class="mian-left left">                    <!--新歌首发-->
+            <div class="mian-title">                    <!--新歌首发的标题-->
+                <div class="mian-title-h2 left">    
+                    <samp>新歌</samp>首发
+                </div>
+                <div class="mian-title-h4 left">
+                    <a href="#">华语</a>
+                    <a href="#">欧美</a>
+                    <a href="#">韩国</a>
+                    <a href="#">日本</a>
+                </div>
+                <a href="#" class="mian-title-btn right">
+                    全部播放
+                </a>
+            </div>
+
+            <div class="mian-shou">                 <!--新歌首发的主体部分-->
+                <div class="mian-shou-zhong">
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 1-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 2-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 3-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 4-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 5-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 6-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 7-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                    <a class="mian-shou-ge" href="#">               <!--新歌首发的一条歌 8-->
+                        <div class="mian-shou-text left">
+                            <samp class="left">是的根据国家是否该</samp>
+                            <em class="left">独家</em>
+                        </div>
+                        
+                        <div class="left mian-shou-bo"></div>
+                        <div class="left mian-shou-zai"></div>
+                        <samp class="mian-shou-time right">4:50</samp>
+                    </a>
+                </div>
+                <div class="mian-shou-di">           <!--新歌首发的下一页-->
+                    <div class="mian-shou-fen">
+                        <a href="#"><</a>
+                        <samp>1/3</samp>
+                        <a href="#">></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mian-right right">                <!--推荐MV-->
+            <div class="mian-title">                  <!--推荐MV的标题-->
+                <div class="mian-title-h2 left">
+                    <samp>推荐</samp>MV
+                </div>
+                <a href="#" class="right mian-title-a">更多</a>
+            </div>
+            
+            <div class="mian-mv">
+                <a href="#" class="mian-mv-1">                <!--推荐MV的大mv-->
+                    <img src="img/q9.jpg" alt="q9">
+                    <div class="mian-ge-di">
+                        <samp class="mian-ge-samp-1">阿萨电话回访</samp>
+                        <samp class="mian-ge-samp-2">噼噼啪啪扩付</samp>
+                    </div>
+                    <div class="mian-mv-zhe-1"></div>
+                    <div class="mian-mv-bo"></div>
+                </a>
+                <a href="#" class="mian-mv-2 left">                <!--推荐MV的小mv-->
+                    <div class="mian-mv-sa">
+                        <img src="img/q9.jpg" alt="q9">
+                        <div class="mian-mv-zhe-2"></div>
+                        <div class="mian-mv-bo"></div>
+                    </div>
+                    <samp class="mian-mv-samp-1">阿萨德九宫格</samp>
+                    <samp class="mian-mv-samp-2">sad海沸江翻</samp>
+                </a>
+                <a href="#" class="mian-mv-2 right">                <!--推荐MV的小mv-->
+                    <div class="mian-mv-sa">
+                        <img src="img/q9.jpg" alt="q9">
+                        <div class="mian-mv-zhe-2"></div>
+                        <div class="mian-mv-bo"></div>
+                    </div>
+                    <samp class="mian-mv-samp-1">阿萨德九宫格</samp>
+                    <samp class="mian-mv-samp-2">sad海沸江翻</samp>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mian">                                  <!--热门电台、热门歌手-->
+        <div class="mian-left left">                    <!--热门电台-->
+            <div class="mian-title">                    <!--热门电台的标题-->
+                <div class="mian-title-h2 left">
+                    <samp>热门</samp>电台
+                </div>
+                <a href="#" class="right mian-title-a">
+                    更多
+                </a>
+            </div>
+            <div class="mian-dian">                     <!--热门电台的第一列-->
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>KTV必点曲</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>中文DJ</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>酷狗热歌</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>网络红歌</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>经典</samp>
+                </a>
+            </div>
+            <div class="mian-dian" style="margin-top: 28px">                      <!--热门电台的第二列-->
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>老情歌</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>新歌</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>动漫</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>轻音乐</samp>
+                </a>
+                <a href="#" class="mian-dian-rong">
+                    <div class="mian-dian-1">
+                        <img src="img/q9.jpg" alt="q9"/>
+                        <div class="mian-dian-zhe-1"></div>
+                        <div class="mian-dian-zhe-2"></div>
+                        <div class="mian-dian-zhe-3"></div>
+                        <div class="mian-dian-bo"></div>
+                    </div>
+                    <samp>最爱成名曲</samp>
+                </a>
+            </div>
+        </div>
+
+        <div class="mian-right right">                  <!--热门歌手-->
+            <div class="mian-title">                    <!--热门歌手的标题-->
+                <div class="mian-title-h2 left">
+                    <samp>热门</samp>歌手 
+                </div>
+                <div class="mian-title-h4 left">
+                        <a href="#">华语</a>
+                        <a href="#">欧美</a>
+                        <a href="#">日韩</a>
+                </div>
+                <a href="#" class="right mian-title-a">
+                    更多
+                </a>
+            </div>
+            <div class="mian-re">                       <!--热门歌手的主体部分-->
+                <ul id="oul1">
+                    <li>
+                        <div class="mian-re-1">
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>111111afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>111111afasfsafasdsadfasdasd</samp>
+                            </a>
+                        </div>
+                        <div class="mian-re-2">
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>111111afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>111111afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>111111afasfsafasdsadfasdasd</samp>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mian-re-1">
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>2222222afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>22222222222afasfsafasdsadfasdasd</samp>
+                            </a>
+                        </div>
+                        <div class="mian-re-2">
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>2222222222afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>2222222222222222afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>22222222222222222afasfsafasdsadfasdasd</samp>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mian-re-1">
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>333333333333afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>3333333333333333333afasfsafasdsadfasdasd</samp>
+                            </a>
+                        </div>
+                        <div class="mian-re-2">
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>333333333333333afasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>33333333333333fasfsafasdsadfasdasd</samp>
+                            </a>
+                            <a href="#">
+                                <img src="img/q9.jpg" alt="q9">
+                                <div></div>
+                                <samp>333333333333333afasfsafasdsadfasdasd</samp>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mian-re-di">                    <!--热门歌手的底部-->
+                <ul id="oul2">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="mian">  
+        <div style="width: 1000px;" class="mian-left left">                       <!--合作伙伴-->
+            <div class="mian-title">                        <!--合作伙伴的标题-->
+                <div class="mian-title-h2 left">    
+                    <samp>合作</samp>伙伴
+                </div>
+            </div>
+            <div class="mian-guang">
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+            </div>
+            <div class="mian-guang">
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+            </div>
+            <div class="mian-guang">
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/q9.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mian">  
+        <div style="width: 1000px;" class="mian-left left">         <!--友情连接-->
+            <div class="mian-title">                                <!--友情连接的标题-->
+                <div class="mian-title-h2 left">    
+                    <samp>合作</samp>伙伴
+                </div>
+                <a href="#" class="right mian-title-a">更多</a>
+            </div>
+            <div class="mian-you">
+                <a href="#">爱美网</a>
+                <a href="#">中央网综艺频道</a>
+                <a href="#">汽车论坛</a>
+                <a href="#">IT之家</a>
+                <a href="#">iPhone游戏</a>
+                <a href="#">旅游攻略</a>
+                <a href="#">悦声无限</a>
+                <a href="#">华为商城</a>
+                <a href="#">365音乐网</a>
+                <a href="#">软件下载</a>
+                <a href="#">漫漫看漫画</a>
+                <a href="#">手机游戏</a>
+                <a href="#">5sing原创音乐</a>
+                <a href="#">腾讯音乐人</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"><!--尾部-->
+        <div class="foo">
+            <div class="foo-1">
+                <a href="#">关于酷狗</a>
+                <samp>|</samp>
+                <a href="#">监督举报</a>
+                <samp>|</samp>
+                <a href="#">广告服务</a>
+                <samp>|</samp>
+                <a href="#">版权指引</a>
+                <samp>|</samp>
+                <a href="#">隐私政策</a>
+                <samp>|</samp>
+                <a href="#">用户服务协议</a>
+                <samp>|</samp>
+                <a href="#">推广合作</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐人</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐推</a>
+                <samp>|</samp>
+                <a href="#">招聘信息</a>
+                <samp>|</samp>
+                <a href="#">客服中心</a>
+                <samp>|</samp>
+                <a href="#">用户体验提升计划</a>
+            </div>
+        </div>
+        
+        <div class="foo-2">
+			<div class="foo-text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</div>
+            <div class="foo-text">信息网络传播视听节目许可证1910564增值电信业务经营许可证粤B-2-20060339ICP &nbsp&nbsp&nbsp备09017694号-2</div>
+            <div class="foo-text">广播电视节目制作经营许可证（粤）字第01270号&nbsp&nbsp &nbsp 营业性演出许可证穗天演440106026</div>
+            <div class="foo-text">穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018&nbsp;&nbsp;&nbsp;粤公网安备 44010602000141号</div>
+            <div class="foo-text">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2018 KuGou-Inc.All Rights Reserved</div>
+        </div>
+    </div>
+</body>
+</html>

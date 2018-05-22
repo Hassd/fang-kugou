@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/mian.css">
+    <style>
+        body{user-select:none;}
+        .mian{margin-top: 20px;}
+        .mian-left{width: 210px;}
+        .mian-left li{width: 100%; height: 36px;clear: both;margin: 10px 0;}
+        .mian-left a{width: 100%; height: 36px;text-align: center;line-height: 36px;font-size: 12px;display: block;color: #555;}
+        .mian-left a:hover{color: #fff;background: #169af3;}
+        .mian-action{background: #169af3;color: #fff !important;}
+        .mian-right{margin-bottom: 40px;}
+        .mian-ge{width: 770px;height: 100px;margin-bottom: 17px;border-bottom: 1px solid #cecece;padding-bottom: 17px;}
+        .ge-1{width: 120px;}
+        .ge-1 a{display: block;position: relative;}
+        .ge-1 a img{width: 100px;height: 100px;border: 1px solid #fff;box-shadow: 0 0 2px 1px #999;z-index: 10;}
+
+        .ge-1 a:before,.ge-1 a:after {content: "";position: absolute;-webkit-transform: rotate(-10deg);transform: rotate(-10deg);bottom: 15px;box-shadow: 0 15px 5px rgba(0, 0, 0, 0.3);height: 10px;left: -3px;max-width: 50px;width: 50%;}
+        .ge-1 a:after {-webkit-transform: rotate(10deg);transform: rotate(10deg);left: 53px;}
+        .ge-1 a .content {position: relative;z-index: 2;font-size: 13px;text-align: center;background: #fff;padding: 10px;}
+        
+        .ge-2{width: 650px;}
+        .ge-h3{width: 100%;margin-bottom: 15px;height: 12px;}
+        .ge-h3-right,.ge-h3-left{display: block;color: #333;font-size: 12px;}
+        .ge-h3-left:hover{color: #61b8f1;}
+
+        .ge-text{width: 100%;clear: both;color: #999;font-size: 12px;line-height: 20px;margin-bottom: 10px;display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+        .ge-btn{width: 100%;}
+        .ge-btn a{height: 28px;background-color: #169af3;display: block;font-size: 12px;color: #fff;border-radius: 2px;text-indent: 40px;float: left;line-height: 28px;background-repeat: no-repeat;background-image: url(img/播分.png);}
+        .ge-btn a:hover{background-color: #0077c7}
+        .ge-btn-1{width: 105px; margin-right: 20px;background-position: 20px 6px;}
+        .ge-btn-2{width: 90px;background-position: 20px -28px;}
+    </style>
+</head>
+<body>
+    <div id="head">                                     <!--头部-->
+        <div class="he-title">
+            <div class="logo left">                     <!--logo、搜索、登录、注册-->
+                <img src="img/logo.png" alt="logo">     <!--logo-->
+            </div>  
+            <div class="search left">                   <!--搜索-->
+                <div class="search-1">                  <!--搜索框-->
+                    <input class="left" type="text" placeholder="啦啦啦">
+                    <a class="left" href="#"></a>
+                </div>
+            </div>
+            <div class="he-ti-ke left">                      <!--客服中心、招贤纳士、会员中心-->
+                <a href="#">客服中心</a>
+                <a href="#">招贤纳士</a>
+                <a href="#">会员中心</a>
+            </div>
+            <div class="he-ti-de right">                      <!--登录、注册-->
+                <a class="left" href="#">登录</a>
+                <a class="left" href="registered.html">注册</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="navr">                                     <!--导航栏-->
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="list.html">榜单</a></li>
+                <li><a href="download.html">下载客户端</a></li>
+                <li class="nav-2">          <!--二级菜单-->
+                    <a>更多<samp></samp></a>
+                    <ul>
+                        <il><a href="radio.html">电台</a></il>
+                        <il><a href="MV.html">MV</a></il>
+                        <il><a href="playlist.html">歌单</a></il>
+                        <il><a href="singer.html">歌手</a></il>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-3 right">
+                <ul>
+                    <li><a class="nav-3-a1" href="#">音乐直播</a></li>
+                    <li><a class="nav-3-a2" href="#">酷狗LIVE</a></li>
+                    <li><a class="nav-3-a3" href="#">音乐人</a></li>
+                    <li><a class="nav-3-a4" href="#">游戏</a></li>
+                    <li><a class="nav-3-a5" href="#">商城</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="mian"><!--主要内容-->
+        <div class="mian-left left">
+            <ul>
+                <li><a class="mian-action" href="#">推荐</a></li>
+                <li><a href="#">最热</a></li>
+                <li><a href="#">热藏</a></li>
+                <li><a href="#">飙升</a></li>
+            </ul>
+        </div>
+        <div class="mian-right right">
+                <div class="mian-ge">
+                    <div class="ge-1 left">
+                        <a href="#"><img src="img/q9.jpg"></a>
+                    </div>
+                    <div class="ge-2 left">
+                        <div class="ge-h3">
+                            <a href="#" title="不要想他" class="ge-h3-left left">不要想他</a>
+                            <samp class="ge-h3-right right">制作人：奥斯卡级</samp>
+                        </div>
+                        <p class="ge-text">
+                            按时给大家和京津冀积分换话费撒娃哈哈健身卡舒服服务家哈桑单几哈积分换客户诉我去喝口水就会返回金华市分行客户将按时开放后开始发货客户可骄傲和舒服就好看是否十多个发发生纠纷宫颈癌是官方技术股份就是按时发顺丰哈斯电压是否过度阿斯蒂芬
+                        </p>
+                        <div class="ge-btn">
+                            <a class="ge-btn-1" href="#">播放全部</a>
+                            <a class="ge-btn-2" href="#">分享</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mian-ge">
+                    <div class="ge-1 left">
+                        <a href="#"><img src="img/q9.jpg"></a>
+                    </div>
+                    <div class="ge-2 left">
+                        <div class="ge-h3">
+                            <a href="#" title="不要想他" class="ge-h3-left left">不要想他</a>
+                            <samp class="ge-h3-right right">制作人：奥斯卡级</samp>
+                        </div>
+                        <p class="ge-text">
+                            按时给大家和京津冀积分换话费撒娃哈哈健身卡舒服服务家哈桑单几哈积分换客户诉我去喝口水就会返回金华市分行客户将按时开放后开始发货客户可骄傲和舒服就好看是否十多个发发生纠纷宫颈癌是官方技术股份就是按时发顺丰哈斯电压是否过度阿斯蒂芬
+                        </p>
+                        <div class="ge-btn">
+                            <a class="ge-btn-1" href="#">播放全部</a>
+                            <a class="ge-btn-2" href="#">分享</a>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+        
+    </div>
+
+    <div id="footer"><!--尾部-->
+        <div class="foo">
+            <div class="foo-1">
+                <a href="#">关于酷狗</a>
+                <samp>|</samp>
+                <a href="#">监督举报</a>
+                <samp>|</samp>
+                <a href="#">广告服务</a>
+                <samp>|</samp>
+                <a href="#">版权指引</a>
+                <samp>|</samp>
+                <a href="#">隐私政策</a>
+                <samp>|</samp>
+                <a href="#">用户服务协议</a>
+                <samp>|</samp>
+                <a href="#">推广合作</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐人</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐推</a>
+                <samp>|</samp>
+                <a href="#">招聘信息</a>
+                <samp>|</samp>
+                <a href="#">客服中心</a>
+                <samp>|</samp>
+                <a href="#">用户体验提升计划</a>
+            </div>
+        </div>
+        
+        <div class="foo-2">
+			<div class="foo-text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</div>
+            <div class="foo-text">信息网络传播视听节目许可证1910564增值电信业务经营许可证粤B-2-20060339ICP &nbsp&nbsp&nbsp备09017694号-2</div>
+            <div class="foo-text">广播电视节目制作经营许可证（粤）字第01270号&nbsp&nbsp &nbsp 营业性演出许可证穗天演440106026</div>
+            <div class="foo-text">穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018&nbsp;&nbsp;&nbsp;粤公网安备 44010602000141号</div>
+            <div class="foo-text">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2018 KuGou-Inc.All Rights Reserved</div>
+        </div>
+    </div>
+</body>
+</html>

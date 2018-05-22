@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/mian.css">
+    <style>
+        body{user-select:none;}
+        .mian{margin-top: 22px;}
+        .mian-dian1{width: 332px;height: 210px;}
+        .mian-dian1 h3{color: #333;font-size: 15px;height: 27px;border-bottom: 1px solid #c2c2c2;width: 100%;}
+        .mian-dian1 ul{height: 182px;width: 100%;}
+        .mian-dian1 li{width: 100%;height: 26px;}
+        .mian-dian1 li:nth-child(odd){background: #fff;}
+        .mian-dian1 li:nth-child(even){background: #efefef;}
+        .mian-dian1 a{display: block;height: 26px;width: 100%;text-indent: 20px;font-size: 12px;color: #666;line-height: 26px;}
+        .mian-dian1 a:hover{background: #efefef;}
+        .mian-dian2{height: 206px;width: 649px;border: 2px solid #b8b8b8;}
+        .mian-img{width: 206px;height: 206px;}
+        .mian-img img{width: 206px;height: 206px;}
+        .mian-bo{width: 419px;height: 206px;margin: 0 12px;position:relative;}
+        .mian-bo h3{width: 100%;height: 36px;color: #4f4f4f;line-height: 36px;font-size: 16px;}
+        .mian-dian-text{position: absolute;font-size: 12px;height: 23px;padding-right: 18px;width: 140px;top: 0;left: 260px;background: #b8b8b8;color: #fff;line-height: 23px;text-align: right;}
+        .mian-fang{height: 170px;}
+        .mian-ci{height: 85px;width: 100%;font-size: 18px;line-height: 85px;text-align:center;color: #666;}
+        .mian-yin{width: 100%;height: 26px;}
+        .mian-yin samp{width: 45px;height: 23px;text-align: center;line-height: 23px;font-size: 18px;color: #333;}
+        .mian-yin-1{width: 30px;height: 23px;cursor: pointer;background: url(img/la.png) no-repeat 12px 4px;margin-left: 5px;}
+        .mian-yin-2{width: 100%;height: 3px;background: #999;}
+        .mian-qi{height: 60px;width: 100%;}
+        .mian-qi div{width: 34px;height: 34px;border: 3px solid #9a9595;border-radius: 50%;float: left;cursor: pointer;}
+        .mian-qi-1{margin: 10px 13px 0px 10px;background: url(img/la.png) no-repeat -18px 10px;}
+        .mian-qi-2{margin-top: 10px;background: url(img/la.png) no-repeat -48px 10px;}
+        .mian-qi-3{width: 20px;height: 20px; display: block;background: url(img/la.png) no-repeat -85px 0px;margin-top: 20px;cursor: pointer;}
+        .mian-qi-4{display: block;height: 20px;font-size: 12px;width: 50px;margin-top: 20px;}
+        
+        .mian-right{width: 780px;}
+        .mian-left{width: 210px;}
+        .mian-h2{height: 30px;width: 100%;text-align: center;background: #cfcfcf;color: #fff;font-size: 15px;line-height: 30px;}
+        .mian-left ul{width: 210px;margin-top: 10px;}
+        .mian-left li{width: 210px;height: 36px;}
+        .mian-left a{width: 210px;height: 36px;display: block;text-align: center;line-height: 36px;color:#555;font-size: 12px;}
+        .mian-left a:hover{background: #85d4f3;color: #fff;}
+        .mian-zhong{background: #85d4f3 !important;color: #fff !important;}
+        .mian-yao{width: 100%;margin-top: 20px;border-left: 1px solid #e2e2e2;}
+        .mian-rong{margin-left: 58px;width: 180px;margin-bottom: 14px;display: block;}
+        .mian-rong-img{width: 32px;height: 32px;padding: 1px;border: 1px solid #ccc;margin-right: 12px;}
+        .mian-rong img{width: 32px;height: 32px;}
+        .mian-rong1{width: 132px;height: 36px;}
+        .mian-rong samp{font-size: 12px;display: block;width: 100%;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+        .miam-title{color: #555;height: 22px;}
+        .mian-text{color: #999;}
+        .mian-rong:hover .mian-rong-img{padding: 0;border: 0;}
+        .mian-rong:hover img{border: 2px solid #1e84e4;}
+        .mian-rong:hover .miam-title{color: #1e84e4;background: url(img/bofang4.png) no-repeat 100px 0px;}
+    </style>
+</head>
+<body>
+    <div id="head">                                     <!--头部-->
+        <div class="he-title">
+            <div class="logo left">                     <!--logo、搜索、登录、注册-->
+                <img src="img/logo.png" alt="logo">     <!--logo-->
+            </div>  
+            <div class="search left">                   <!--搜索-->
+                <div class="search-1">                  <!--搜索框-->
+                    <input class="left" type="text" placeholder="啦啦啦">
+                    <a class="left" href="#"></a>
+                </div>
+            </div>
+            <div class="he-ti-ke left">                      <!--客服中心、招贤纳士、会员中心-->
+                <a href="#">客服中心</a>
+                <a href="#">招贤纳士</a>
+                <a href="#">会员中心</a>
+            </div>
+            <div class="he-ti-de right">                      <!--登录、注册-->
+                <a class="left" href="#">登录</a>
+                <a class="left" href="registered.html">注册</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="navr">                                     <!--导航栏-->
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="list.html">榜单</a></li>
+                <li><a href="download.html">下载客户端</a></li>
+                <li class="nav-2">          <!--二级菜单-->
+                    <a>更多<samp></samp></a>
+                    <ul>
+                        <il><a href="radio.html">电台</a></il>
+                        <il><a href="MV.html">MV</a></il>
+                        <il><a href="playlist.html">歌单</a></il>
+                        <il><a href="singer.html">歌手</a></il>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-3 right">
+                <ul>
+                    <li><a class="nav-3-a1" href="#">音乐直播</a></li>
+                    <li><a class="nav-3-a2" href="#">酷狗LIVE</a></li>
+                    <li><a class="nav-3-a3" href="#">音乐人</a></li>
+                    <li><a class="nav-3-a4" href="#">游戏</a></li>
+                    <li><a class="nav-3-a5" href="#">商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mian"><!--主要内容-->
+        <div class="mian-dian1 left">
+            <h3>最近听过的电台</h3>
+            <ul>
+                <li><a href="#">sad加工费</a></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="mian-dian2 right">
+            <div class="mian-img left">
+                <img src="img/q9.jpg" alt="q9">
+            </div>
+            <div class="mian-bo left">
+                <h3>汪峰 - 北京北京</h3>
+                <div class="mian-dian-text">寂寞电台</div>
+                <div class="mian-fang">
+                    <div class="mian-ci">
+                        没有歌词
+                    </div>
+                    <div class="mian-yin">
+                        <div class="mian-yin-1 right"></div>
+                        <samp class="right">-02:34</samp>
+                        <div class="mian-yin-2 left"></div>
+                    </div>
+                    <div class="mian-qi">
+                        <div class="mian-qi-1"></div>
+                        <div class="mian-qi-2"></div>
+                        <span class="mian-qi-3 right"></span>
+                        <samp class="mian-qi-4 right">分享到：</samp>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mian"><!--主要内容-->
+        <div class="mian-left left">
+            <h2 class="mian-h2">电台分类</h2>
+            <ul>
+                <li><a class="mian-zhong" href="#">全部电台</a></li>
+                <li><a href="#">主题电台</a></li>
+                <li><a href="#">风格电台</a></li>
+                <li><a href="#">语言电台</a></li>
+                <li><a href="#">人群电台</a></li>
+                <li><a href="#">地点电台</a></li>
+                <li><a href="#">心情电台</a></li>
+            </ul>
+        </div>
+        <div class="mian-right right">
+            <h2 class="mian-h2">全部电台（122）</h2>
+            <div class="mian-yao">
+
+
+                <a href="#" class="mian-rong left">
+                    <div class="mian-rong-img left">
+                        <img src="img/q9.jpg" alt="q9">
+                    </div>
+                    <div class="mian-rong1 right">
+                        <samp class="miam-title">KTV必点</samp>
+                        <samp class="mian-text">周杰伦 - 回到过去</samp>
+                    </div>
+                    
+                </a>
+
+                <a href="#" class="mian-rong left">
+                    <div class="mian-rong-img left">
+                        <img src="img/q9.jpg" alt="q9">
+                    </div>
+                    <div class="mian-rong1 right">
+                        <samp class="miam-title">KTV必点</samp>
+                        <samp class="mian-text">周杰伦 - 回到过去</samp>
+                    </div>
+                    
+                </a>
+                <a href="#" class="mian-rong left">
+                    <div class="mian-rong-img left">
+                        <img src="img/q9.jpg" alt="q9">
+                    </div>
+                    <div class="mian-rong1 right">
+                        <samp class="miam-title">KTV必点</samp>
+                        <samp class="mian-text">周杰伦 - 回到过去</samp>
+                    </div>
+                    
+                </a>                
+                <a href="#" class="mian-rong left">
+                    <div class="mian-rong-img left">
+                        <img src="img/q9.jpg" alt="q9">
+                    </div>
+                    <div class="mian-rong1 right">
+                        <samp class="miam-title">KTV必点</samp>
+                        <samp class="mian-text">周杰伦 - 回到过去</samp>
+                    </div>
+                    
+                </a>
+
+
+
+                <div style="clear: both"></div>
+            </div>
+
+        </div>  
+    </div>
+    <div id="footer"><!--尾部-->
+        <div class="foo">
+            <div class="foo-1">
+                <a href="#">关于酷狗</a>
+                <samp>|</samp>
+                <a href="#">监督举报</a>
+                <samp>|</samp>
+                <a href="#">广告服务</a>
+                <samp>|</samp>
+                <a href="#">版权指引</a>
+                <samp>|</samp>
+                <a href="#">隐私政策</a>
+                <samp>|</samp>
+                <a href="#">用户服务协议</a>
+                <samp>|</samp>
+                <a href="#">推广合作</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐人</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐推</a>
+                <samp>|</samp>
+                <a href="#">招聘信息</a>
+                <samp>|</samp>
+                <a href="#">客服中心</a>
+                <samp>|</samp>
+                <a href="#">用户体验提升计划</a>
+            </div>
+        </div>
+        
+        <div class="foo-2">
+			<div class="foo-text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</div>
+            <div class="foo-text">信息网络传播视听节目许可证1910564增值电信业务经营许可证粤B-2-20060339ICP &nbsp&nbsp&nbsp备09017694号-2</div>
+            <div class="foo-text">广播电视节目制作经营许可证（粤）字第01270号&nbsp&nbsp &nbsp 营业性演出许可证穗天演440106026</div>
+            <div class="foo-text">穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018&nbsp;&nbsp;&nbsp;粤公网安备 44010602000141号</div>
+            <div class="foo-text">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2018 KuGou-Inc.All Rights Reserved</div>
+        </div>
+    </div>
+</body>
+</html>

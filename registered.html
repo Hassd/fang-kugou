@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/mian.css">
+    <style>
+        .bao{width: 1000px;margin: 0 auto;}
+        .fan{width: 100%;height: 60px;background-color: #008ad4;}
+        #mian2,#head2,#nav2{width: 960px;margin: 0 auto;}
+        #head2{height: 40px;}
+        .head2-1{font-size: 17px;width: 220px;text-indent: 25px;color: #cacaca;height: 18;margin-top: 11px;}
+        .head2-2{height: 16px;margin-top: 10px;color: #0c85cc;}
+        .head2-2 samp,.head2-2 a{font-size: 14px;color: #0c85cc;display: block;float: left;margin-left: 10px;}
+        .gwc{width: 17px;height: 17px;background: url(img/购物车.png)}
+        .head2-2 a:hover{text-decoration:underline;}
+        #nav2{height: 60px;}
+        #nav2 li{margin-top: 22px;}
+        .nav2-2 a,.nav2-3 a{padding: 11px; height: 15px;font-size: 15px;color: #fff;font-weight: 900;}
+        .nav2-1{margin-top: 10px;width: 170px;height: 40px;}
+        .nav2-1 img{width: 170px;height: 40px;}
+        .nav2-2{margin-left: 11px;} 
+        .nav2-2{margin-right: 8px;}
+        form{width: 958px;height: 628px;margin: 0 auto;border: 1px solid #54ade7;border-top: 6px solid #54ade7;margin-top: 31px;font-size: 14px;color: #474747;margin-bottom: 50px;box-shadow: 1px 1px 5px #999;}
+        form h3{height: 85px;margin: 0 auto;margin-bottom: 42px;width: 130px;line-height:85px;font-size: 22px;color: #006dc1;background: url(img/手机图标.png) no-repeat 0px 28px;text-indent: 30px;}
+        table{margin-left: 269px;}
+        .td1{text-align: right;}
+        .form-text{width: 290px;height: 36px;text-indent: 10px;}
+        .form-dian{width: 134px;margin-right: 4px;}
+        .form-btn{background: #3db9ec; background: #ccc;border-radius: 2px;border: 0;color: #fff;outline: none;}
+        
+        .form-btn-1{width: 68px;height: 38px;font-size: 11px;}
+        .form-btn-2{width: 92px;height: 42px;font-size: 20px;}
+        .tr-ge{height: 15px;}
+        form a{color: #3db9ec;text-decoration: underline;}
+        .td3{ width: 230px;padding-left: 10px;color: #999;}
+
+    </style>
+    <script>
+        
+    window.onload=function(){
+        var atext=document.getElementsByTagName('input');
+        var atd=document.getElementsByTagName('samp');
+        
+        
+        atext[0].onfocus=function(){
+            if(atext[0].value==""){
+                atd[1].innerHTML="请输入手机号";
+            }
+        }
+
+        var btn1=document.getElementById('btn1');
+        atext[0].onblur=function(){
+           
+            if(/^1[0-9]{10}$/.test(atext[0].value)){
+                atd[1].innerHTML="";
+                
+
+                btn1.disabled=false;        //js 事件可用
+                btn1.style.background='#3db9ec';
+                btn1.style.cursor='pointer';
+                btn1.onmousemove=function(){
+                    btn1.style.background='#0c85cc';
+                }
+                btn1.onmouseout=function(){
+                    btn1.style.background='#3db9ec';
+                }
+
+
+                return true;
+            }else{
+                atd[1].innerHTML="请输入手机号";
+                btn1.disabled=true;     //js 事件不可用
+                btn1.style.cursor='';
+                btn1.style.background='#ccc';
+
+
+                return false;
+            }
+        
+        }
+
+        atext[3].onfocus=function(){
+            if(atext[3].value==""){
+                atd[2].innerHTML="密码需由6-16个字母、数字和下划线组成";
+            }
+        }
+        var zz1=/^[0-9a-zA-Z_#]{6,16}$/;
+        atext[3].onblur=function(){
+            zhengze(zz1,atext[3],atd[2],"密码需由6-16个字母、数字和下划线组成");
+        }
+
+        atext[4].onblur=function(){
+            if(atext[4].value==atext[3].value){
+                atd[3].innerHTML="";
+            }else{
+                atd[3].innerHTML="两次密码不一样";
+            }
+        }
+
+        var checkbox=document.getElementById('checkbox');
+        var btn2=document.getElementById('btn2');
+        checkbox.checked=true;
+
+        checked();
+
+        function checked(){
+            if(checkbox.checked==true){
+                btn2.disabled=false;        //js 事件可用
+                btn2.style.background='#3db9ec';
+                btn2.style.cursor='pointer';
+                btn2.onmousemove=function(){
+                    btn2.style.background='#0c85cc';
+                }
+                btn2.onmouseout=function(){
+                    btn2.style.background='#3db9ec';
+                }
+            }else{
+                btn2.disabled=true;     //js 事件不可用
+                btn2.style.cursor='';
+                btn2.style.background='#ccc';
+            }
+        }
+        
+        checkbox.onclick=function(){
+            checked();
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+    function zhengze(zz,wbk,tcdf,text){  //zz正则表达式、wbk文本框、tcdf显示文字的地方、text显示的文字
+        if(zz.test(wbk.value)){
+            tcdf.innerHTML="";
+            return true;
+        }else{
+            tcdf.innerHTML=text;
+            return false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="bao">
+        <div id="head2">                                     <!--头部-->
+            <div class="head2-1 left">
+                对不起，是仿酷狗音乐
+            </div>
+            <div class="head2-2 right">
+                <a href="#">注册</a>
+                <a href="#">登录</a>
+                <samp>|</samp>
+                <a class="gwc" href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div class="fan">
+        <div class="bao">
+            <div id="nav2">
+                <div class="nav2-1 left">
+                    <a href="index.html"><img src="img/logo2.png"></a>
+                </div>
+                <ul class="nav2-2 left">
+                    <li><a href="#">酷狗商城</a></li>
+                    <li><a href="#">下载客户端</a></li>
+                    <li><a href="#">音乐直播</a></li>
+                    <li><a href="#">酷狗音乐人</a></li>
+                </ul>
+                <ul class="nav2-3 right">
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">VIP中心</a></li>
+                    <li><a href="#">客服中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bao">
+        <form action="">
+            <h3>
+                手机注册
+            </h3>
+            <table>
+                <tr>
+                    <td class="td1">*手机号码：</td>
+                    <td><input class="form-text" type="text" maxlength="11"></td>
+                    <td class="td3"><samp></samp></td>
+                </tr>
+                <tr class="tr-ge"></tr>
+                <tr>
+                    <td class="td1">*短信验证：</td>
+                    <td>
+                        <input class="form-text form-dian" type="text">
+                        <input id="btn1" class="form-btn form-btn-1" type="button" value="获取短信">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="tr-ge"></tr>
+                <tr>
+                    <td class="td1">*密码：</td>
+                    <td><input class="form-text" type="password" maxlength="16"></td>
+                    <td class="td3"><samp></samp></td>
+                </tr>
+                <tr class="tr-ge"></tr>
+                <tr>
+                    <td class="td1">*确认密码：</td>
+                    <td><input class="form-text" type="password" maxlength="16"></td>
+                    <td class="td3"><samp></samp></td>
+                </tr>
+                <tr class="tr-ge"></tr>
+                <tr>
+                    <td class="td1">*性别：</td>
+                    <td>
+                        <input type="radio" value="男" name="xx">男&nbsp;&nbsp; 
+                        <input type="radio" value="女" name="xx">女
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="tr-ge"></tr>
+                <tr>
+                    <td></td>
+                    <td><input id="checkbox" type="checkbox">我已经认真阅读并同意&nbsp; <a href="#">用户协议</a>、<a href="#">隐私政策</a></td>
+                    <td></td>
+                </tr>
+                <tr class="tr-ge"></tr>
+                <tr>
+                    <td></td>
+                    <td><input id="btn2" class="form-btn form-btn-2" type="submit" value="注册"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <div id="footer"><!--尾部-->
+        <div class="foo">
+            <div class="foo-1">
+                <a href="#">关于酷狗</a>
+                <samp>|</samp>
+                <a href="#">监督举报</a>
+                <samp>|</samp>
+                <a href="#">广告服务</a>
+                <samp>|</samp>
+                <a href="#">版权指引</a>
+                <samp>|</samp>
+                <a href="#">隐私政策</a>
+                <samp>|</samp>
+                <a href="#">用户服务协议</a>
+                <samp>|</samp>
+                <a href="#">推广合作</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐人</a>
+                <samp>|</samp>
+                <a href="#">酷狗音乐推</a>
+                <samp>|</samp>
+                <a href="#">招聘信息</a>
+                <samp>|</samp>
+                <a href="#">客服中心</a>
+                <samp>|</samp>
+                <a href="#">用户体验提升计划</a>
+            </div>
+        </div>
+        
+        <div class="foo-2">
+			<div class="foo-text">我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</div>
+            <div class="foo-text">信息网络传播视听节目许可证1910564增值电信业务经营许可证粤B-2-20060339ICP &nbsp&nbsp&nbsp备09017694号-2</div>
+            <div class="foo-text">广播电视节目制作经营许可证（粤）字第01270号&nbsp&nbsp &nbsp 营业性演出许可证穗天演440106026</div>
+            <div class="foo-text">穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018&nbsp;&nbsp;&nbsp;粤公网安备 44010602000141号</div>
+            <div class="foo-text">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2018 KuGou-Inc.All Rights Reserved</div>
+        </div>
+    </div>
+</body>
+</html>
